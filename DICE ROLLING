@@ -10,3 +10,26 @@ while True:
         break
     else:
         print ('innvalid choice')
+
+
+""" improvised code"""
+
+import random
+while True:
+    choice = input('Roll the dice? (y/n): ').lower()
+    try:
+        if choice == 'y':
+            times = int(input ('no of times the dice should be roll?: '))
+            n = times
+            if n != 0:
+                for i in range (n):
+                    die1 = random.randint(1,6)
+                    die2 = random.randint(1,6)
+                    print(f'({die1},{die2})')
+        elif choice == 'n':
+            print ('thanks for playing')
+            break
+        else:
+            print ('innvalid choice')
+    except ValueError:
+        print ("please enter a valid number.")
